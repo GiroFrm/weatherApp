@@ -8,13 +8,10 @@ export default async function fetchingWeather(location) {
     try{
     const response = await  fetch(API_CITY, {mode: 'cors'});
     const data = await response.json();
-  
-    console.log(data);
-    console.log(data.currentConditions)
-    
+    return data;
     }catch(Error){
         console.log(Error);
-    }
+    }    
 }
 
 
