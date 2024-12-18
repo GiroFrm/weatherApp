@@ -78,8 +78,7 @@ span{
     border: 1px solid orange;
     display: flex;
     flex-wrap: wrap;
-    column-gap: 2.5rem;
-
+    column-gap: 2rem;
 }
 
 .hourly-temperature-container{
