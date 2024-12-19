@@ -2,18 +2,7 @@
 
 import { createElement, createImgElement, getDayName } from "../../util";
 import {getConditionImg } from "./conditionImgs"
-{/* <div class="card-week-forecast">
-<p class="card-week-forecast__day">Monday</p>
-<img src="images/sun.svg" height="50" alt="sunny">
-<!-- <div> -->
-    <p class="card-week-forecast__temp-max">temp-max</p>
-    <p class="card-week-forecast__temp-min">temp-min1</p> 
-<!-- </div> -->
-</div> */}
 
-
- // dinamically daily forecast elements
-//create 7 daily elements components and attache to the hourly container
 export function getDailyForecast(data) {
    
     const hourly_container = createElement('div', 'hourly-container');
