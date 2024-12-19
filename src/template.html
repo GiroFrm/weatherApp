@@ -6,104 +6,133 @@
     <title>Weather App</title>
 </head>
 <body>
+    <button class="test">Test</button>
+
+    <form>
+        <input type="text" id="street" name="city" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="wrapper">
+        
     <div class="current-container">
-    
-     <p>current weather<span>
-        1:47pm</span></p>
      
+      <div>
+     <p class="location">Melbourne</p>
+     <p class="current-time">current weather<span class="current-time"> 1:47pm</span></p>
+    </div>
      <div class="temp-container">
+       <img src="images/sun.svg" height="80" alt="sun">
         <p class="temp-container__temp">40^c</p>
-        <p>mostly cloudly</p>
+        <p class="temp-container__conditions">mostly cloudly</p>
      </div>
+
      <p class="description">description</p>
 
      <div class="container-infos">
-      <p>feels <span>43</span></p>
-      <p>precipitation: <span>40%</span></p>
-      <p>Wind: <span>20km/h</span></p>
-      <p>Humidity<span>20%</span></p>
-      <p>Visibility<span>9.1</span></p>
-      <p>sunrise<span>"05:52:29"</span></p>
-      <p>sunset<span>"20:52:29"</span></p>
+      <p class="container-infos__feels">feels <span>43</span></p>
+      <p class="container-infos__precip">precipitation: <span>40%</span></p>
+      <p class="container-infos__wind">Wind: <span>20km/h</span></p>
+      <p class="container-infos__hum">Humidity<span>20%</span></p>
+      <p class="container-infos__vis">Visibility<span>9.1</span></p>
+      <p class="container-infos__sun">sunrise<span >"05:52:29"</span></p>
+      <p class="container-infos__sunset">sunset<span >"20:52:29"</span></p>
+     </div>
+
+    </div>
+
+
+    <!-- <div class="hourly-temperature-container"> -->
+        <div class="hourly-container">
+
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+        <div class="card-hour-temperature">
+            <p class="card-hour-temperature__temp">temperature</p>
+            <p class="card-hour-temperature__time">time</p>
+        </div>
+    <!-- </div> -->
+
+    <!-- <div class="week-forecast-container"> -->
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Monday</p>
+        <img src="images/sun.svg" height="50" alt="sunny">
+        <!-- <div> -->
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min1</p> 
+        <!-- </div> -->
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Tuesday</p>
+        <img src="images/partiallyCloudy.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Wednesday</p>
+        <img src="images/rain.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Thursday</p>
+        <img src="images/snow.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Friday</p>
+        <img src="images/cloudy.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Saturday</p>
+        <img src="images/sun.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
+     </div>
+     <div class="card-week-forecast">
+        <p class="card-week-forecast__day">Sunday</p>
+        <img src="images/sun.svg" height="50" alt="">
+        <div>
+            <p class="card-week-forecast__temp-max">temp-max</p>
+            <p class="card-week-forecast__temp-min">temp-min</p> 
+        </div>
      </div>
     </div>
-    <div class="hourly-temperature-container">
-        <div>
-            <p>time</p>
-            <p>Logo</p>
-            <p>temperature</p>
-        </div>
-        <div>
-            <p>time</p>
-            <p>Logo</p>
-            <p>temperature</p>
-        </div>
-        <div>
-            <p>time</p>
-            <p>Logo</p>
-            <p>temperature</p>
-        </div>
-        <div>
-            <p>time</p>
-            <p>Logo</p>
-            <p>temperature</p>
-        </div>
-        <div>
-            <p>time</p>
-            <p>Logo</p>
-            <p>temperature</p>
-        </div>
-    </div>
-    <div class="week-forecast-container">
-     <div class="card-week-forecast">
-        <p>Monday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
      </div>
-     <div class="card-week-forecast">
-        <p>Tuesday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-     </div>
-     <div class="card-week-forecast">
-        <p>Wednesday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-     </div>
-     <div class="card-week-forecast">
-        <p>Thursday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-     </div>
-     <div class="card-week-forecast">
-        <p>Friday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-     </div>
-     <div class="card-week-forecast">
-        <p>Saturday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-     </div>
-     <div class="card-week-forecast">
-        <p>Sunday</p>
-        <p>logo</p>
-        <div><p>temp-min</p>
-            <p>temp-max</p>
-        </div>
-    </div>
-    </div>
 </body>
 </html>
