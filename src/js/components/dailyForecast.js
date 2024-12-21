@@ -1,12 +1,10 @@
 //build daily component weather
 
-import { createElement, createImgElement, getDayName } from "../../util";
+import { createElement, getDayName } from "../../util";
 import {getConditionImg } from "./conditionImgs"
 
-export function getDailyForecast(data) {
-   
-    const hourly_container = createElement('div', 'hourly-container');
-
+export function getDailyForecast(data, hourly_container) {
+  
     for (let i = 0; i < 7; i++) {
         const dailyForecast = getForecastElement(data.days[i]);
         hourly_container.appendChild(dailyForecast);
@@ -18,9 +16,10 @@ export function getDailyForecast(data) {
 function getForecastElement(data) {
     const card_week_forecast = createElement('div', 'card-week-forecast');
     const weekDay = getWeekDay(data.datetime);
-    const imgCondition = getConditionImg(data.conditions);
-    const temp_max = getMaxTemperature(data.tempmax);
-    const temp_min = getMinTemperature(data.tempmin);
+    const imgCondition = getConditionImg(data.conditions, '50', '50');
+    const temp_max = getTemperatureElement(data.tempmax, 'max');
+    const temp_min = getTemperatureElement(data.tempmin, 'min');
+
     card_week_forecast.appendChild(weekDay);
     card_week_forecast.appendChild(imgCondition);
     card_week_forecast.appendChild(temp_max);
@@ -29,24 +28,17 @@ function getForecastElement(data) {
     return card_week_forecast;
 }
 
-
 function getWeekDay(datetime) {
-    const weekDay = createElement('p', 'card-week-forecast__day',);
-    const currDate = datetime;
-    const dayName = getDayName(currDate);
-        weekDay.innerHTML = dayName;
-        return weekDay;
+    const dayName = getDayName(datetime);
+    return createElement('p', 'card-week-forecast__day',`${dayName}`);
 }
-
-function getMaxTemperature(tempmax) {
-    const temps_max =  createElement('p','.card-week-forecast__temp-max');
-       temps_max.innerHTML = tempmax;
-    return temps_max;
-}
-function getMinTemperature(tempmin) {
-     const temps_min =  createElement('p','.card-week-forecast__temp-min');
-       temps_min.innerHTML = tempmin;
-        return temps_min;
+      
+function getTemperatureElement(temp, type) {
+  const className =
+    type === "max"
+      ? "card-week-forecast__temp-max"
+      : "card-week-forecast__temp-min";
+  return createElement("p", className, `${temp}°C`);
 }
 
 export function imgCondition(){
