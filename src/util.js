@@ -41,5 +41,19 @@ export function createElement(element, className = "", textContent = "") {
   }
 
 
-  
-  
+export function removeChildrenContainer(childrenName) {
+  const childElements = document.querySelectorAll(`.${childrenName}`);
+  childElements.forEach((child) => {
+    if (child.parentNode) {
+      child.parentNode.removeChild(child);
+    }
+  });
+}
+
+export function getCurrentTime(){
+    const now = new Date();
+       const hours = now.getHours();
+       const minutes = now.getMinutes(); 
+       const currentTime = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+       return currentTime;
+}
