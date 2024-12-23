@@ -50,29 +50,40 @@
 
 
 body {
+   padding-left: 1rem;
+   background-color: rgb(220,224,250);
+}
+
+.wrapper{
    
 }
 
+.location-container{
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
 .current-container{
-    border: 1px solid green;
     margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.4rem;
 
+    background-color: rgb(248,249,254);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    padding-block: 1rem;
+    
 }
 
 .current-container>*:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
-
 .current-time span{
     display: inline;
 }
-
 span{
     display: block;
 }
 
 .temp-container{
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -84,44 +95,48 @@ span{
     font-size: 2rem;
 }
 
-.container-infos{
-    border: 1px solid orange;
+.container-infos {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
 }
 
 .hourly-temperature-container{
-    border: 1px solid blue;
     display: flex;
     column-gap:2rem;
 }
 
 .week-forecast-container{
-    border: 1px solid greenyellow;
     display: flex;
     column-gap: 2rem;
 }
+
 .card-week-forecast{
     display: flex;
     flex-direction: column;
-    align-items: center;
-   
-    outline: 1px solid red;
+    align-items: center; 
+    background-color: rgb(248,249,254);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 0.3rem;
+    cursor: pointer;
 }
 
 .card-hour-temperature{
     display: flex;
     flex-direction: column;
     align-items: center;
-   
-    outline: 1px solid red;
+    padding-bottom: 1rem;
+
+    background-color: rgb(248,249,254);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 0.3rem;
 }
 
 .hourly-container{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     row-gap: 1rem;
+    column-gap: 0.4rem;
    
 }
 
