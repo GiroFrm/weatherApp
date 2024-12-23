@@ -2,9 +2,9 @@ import { createElement, createImgElement } from "../../util";
 import { getConditionImg } from "./conditionImgs";
 
 export function getCurrentForecast(data){
-    
+    const conditions = data.conditions.split(",")[0]
     const tempContainer = createElement('div',"temp-container");
-    const imgConditions = getConditionImg(`${data.conditions}`);
+    const imgConditions = getConditionImg(`${conditions}`);
     const temperature = createElement('p', "temp-container__temp", `${data.temp}`);
     const conditionsWeather = createElement('p', "temp_container__conditions",`${data.conditions}`);
 
