@@ -17,7 +17,7 @@ function getForecastElement(data) {
   const conditions = data.conditions.split(",")[0];
     const card_week_forecast = createElement('div', 'card-week-forecast');
     const weekDay = getWeekDay(data.datetime);
-    const imgCondition = getConditionImg(conditions, '50', '50');
+    const imgCondition = getConditionImg(conditions, '40', '40');
     const temp_max = getTemperatureElement(data.tempmax, 'max');
     const temp_min = getTemperatureElement(data.tempmin, 'min');
 
