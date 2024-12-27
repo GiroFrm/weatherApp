@@ -57,6 +57,18 @@ body {
 .wrapper{
    
 }
+.form-location input, button{
+  border: none;
+ border-radius: 4px;
+}
+
+.form-location button {
+  cursor:pointer;
+}
+.form-location button:hover {
+  cursor:pointer;
+  opacity: 0.7;
+}
 
 .location-container{
     margin-bottom: 0.5rem;
@@ -99,6 +111,7 @@ span{
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
+    row-gap: 1.2rem;
 }
 
 .hourly-temperature-container{
@@ -135,10 +148,12 @@ span{
 .hourly-container{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
     row-gap: 1rem;
     column-gap: 0.4rem;
    
 }
+
 
 .wrapper{
     max-width: 700px;
