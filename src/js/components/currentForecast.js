@@ -1,16 +1,16 @@
 import { createElement, createImgElement } from "../../util";
 import { getConditionImg } from "./conditionImgs";
 
-export function getCurrentForecast(data){
+export function getCurrentForecast(data) {
     const conditions = data.conditions.split(",")[0]
-    const tempContainer = createElement('div',"temp-container");
+    const tempContainer = createElement('div', "temp-container");
     const imgConditions = getConditionImg(`${conditions}`);
     const temperature = createElement('p', "temp-container__temp", `${data.temp}`);
-    const conditionsWeather = createElement('p', "temp_container__conditions",`${data.conditions}`);
+    const conditionsWeather = createElement('p', "temp_container__conditions", `${data.conditions}`);
 
-       tempContainer.appendChild(imgConditions);
-       tempContainer.appendChild(temperature);
-       tempContainer.appendChild(conditionsWeather);
+    tempContainer.appendChild(imgConditions);
+    tempContainer.appendChild(temperature);
+    tempContainer.appendChild(conditionsWeather);
 
     return tempContainer
 }
@@ -20,6 +20,8 @@ export function getDescription(description){
 }
 
 export function getInfosCurrentWeather(data) {
+    if (!data) return null;
+
    const containerInfos = createElement('div', "container-infos");
    const feelsLike = getElementInfo("container-infos__feels","feels",data.feelslike);
    const precipProb = getElementInfo("container-infos__precip", "precipitation" ,data.precipprob);
@@ -35,11 +37,13 @@ export function getInfosCurrentWeather(data) {
 
 }
 
-function getElementInfo(className,name ,data,){
+function getElementInfo(className, name, data,) {
+    if (typeof data === 'undefined') return null;
+
     const span = createElement('span');
-    const infoElement = createElement('p',className, name);
-        span.innerHTML = `${data}`  
-        infoElement.appendChild(span);
-        return infoElement;
+    const infoElement = createElement('p', className, name);
+    span.innerHTML = `${data}`
+    infoElement.appendChild(span);
+    return infoElement;
 }
 
