@@ -1,62 +1,12 @@
+ @import './reset.css'; 
 
-/* reset */
-/* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
   
-  /* 2. Remove default margin */
-  * {
-    margin: 0;
-  }
-  
-  body {
-    /* 3. Add accessible line-height */
-    line-height: 1.5;
-    /* 4. Improve text rendering */
-    -webkit-font-smoothing: antialiased;
-  }
-  
-  /* 5. Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* 6. Inherit fonts for form controls */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  /* 7. Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-
-  /* 8. Improve line wrapping */
-  p {
-    text-wrap: pretty;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    text-wrap: balance;
-  }
-  
-  /*
-    9. Create a root stacking context
-  */
-  #root, #__next {
-    isolation: isolate;
-  }
-
-
 body {
    padding-left: 1rem;
    background-color: rgb(220,224,250);
+   padding-top: 2rem;
 }
 
-.wrapper{
-   
-}
 .form-location input, button{
   border: none;
  border-radius: 4px;
@@ -86,7 +36,7 @@ body {
 }
 
 .current-container>*:not(:last-child) {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.7rem;
 }
 .current-time span{
     display: inline;
@@ -128,6 +78,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center; 
+
     background-color: rgb(248,249,254);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border-radius: 0.3rem;
@@ -138,7 +89,7 @@ span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-block: 0.1rem;
 
     background-color: rgb(248,249,254);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -151,9 +102,9 @@ span{
     grid-template-rows: auto;
     row-gap: 1rem;
     column-gap: 0.4rem;
-   
+    font-size: 0.8rem;
+  
 }
-
 
 .wrapper{
     max-width: 700px;
