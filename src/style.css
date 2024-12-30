@@ -35,8 +35,17 @@ body {
     
 }
 
-.current-container>*:not(:last-child) {
-    margin-bottom: 0.7rem;
+.container-infos p{
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.container-infos p span{
+    color: black;
+}
+
+.description {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
 }
 .current-time span{
     display: inline;
@@ -50,11 +59,13 @@ span{
     flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
-    font-weight: bold;
+   
+    margin-bottom: 0;
+  
 }
 
 .temp-container__temp{
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .container-infos {
