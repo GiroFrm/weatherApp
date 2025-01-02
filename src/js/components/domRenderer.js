@@ -7,36 +7,45 @@ import { getCurrentForecast, getDescription, getInfosCurrentWeather } from './cu
 export default async function renderDom(location="melbourne") {
       const wrapper_body =  document.querySelector('.wrapper');
       
+       if ( !location) return 
+     try{
+      wrapper_body.innerHTML = `<p class="message">Loading...</p>`;
 
-       if (location) {
-          wrapper_body.innerHTML = `<p class="message">Loading...</p>`;
+      const data = await fetchingWeather(location);
+        console.log(data);
+      document.querySelector('.location').innerHTML = data.resolvedAddress;
+      document.querySelector('.current-time').innerHTML = data.currentConditions.datetime;
      
-        const data = await fetchingWeather(location);
-      
       wrapper_body.innerHTML = '';
-      const currentContainer =  createElement('div','current-container') //document.querySelector('.current-container');  
+
+      const currentContainer =  createElement('div','current-container')
             currentContainer.innerHTML = '';
-            wrapper_body.appendChild(currentContainer);
-      const tempContainer =  getCurrentForecast(data.currentConditions);
+  
+      const tempContainer = getCurrentForecast(data.currentConditions);
          currentContainer.appendChild(tempContainer);
          currentContainer.appendChild(getDescription(`${data.description}`));
          currentContainer.appendChild(getInfosCurrentWeather(data.currentConditions));
 
-        removeChildrenContainer("hourly-container");
+         wrapper_body.appendChild(currentContainer);
 
-        const hourly_container = createElement('div', 'hourly-container');
-           wrapper_body.appendChild(getHourlyForecast(data, hourly_container));
-           wrapper_body.appendChild(getDailyForecast(data, hourly_container));  
+          removeChildrenContainer("hourly-container");
 
+          const hourlyContainer = createElement('div', 'hourly-container');
+
+           wrapper_body.appendChild(getDailyForecast(data, hourlyContainer));  
+
+       }catch(error){
+            showError(wrapper_body, error);
        }
+      }
+    
+    
+    function showError(wrapper_body, error) {
+      wrapper_body.innerHTML = `<p class="message">Error: ${error.message} location doesn't exists</p>`;
     }
-
-   
-
+    
     document.querySelector('form').addEventListener('submit', handleFormSubmit);
 
-   
-   
     function handleFormSubmit(event) {
          event.preventDefault(); 
          const city = event.target.city.value;
