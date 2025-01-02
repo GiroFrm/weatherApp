@@ -3,10 +3,8 @@ import { createElement, getHourIn12HourFormat } from "../../util";
 
 
 export function getHourlyForecast(data, hourly_container){
-    
     const now = new Date();
     const startHour = now.getHours();
-
     for(let i=0; i<7; i++){
       const hourlyElement =  getHourForecastElement(data, startHour + i);
       hourly_container.appendChild(hourlyElement);
