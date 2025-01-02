@@ -5,7 +5,7 @@ export function getCurrentForecast(data) {
     const conditions = data.conditions.split(",")[0]
     const tempContainer = createElement('div', "temp-container");
     const imgConditions = getConditionImg(`${conditions}`);
-    const temperature = createElement('p', "temp-container__temp", `${data.temp}`);
+    const temperature = createElement('p', "temp-container__temp", `${data.temp}°C`);
     const conditionsWeather = createElement('p', "temp_container__conditions", `${data.conditions}`);
 
     tempContainer.appendChild(imgConditions);
