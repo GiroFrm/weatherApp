@@ -3,4 +3,7 @@ const { merge } = require('webpack-merge');
 
  module.exports = merge(common, {
    mode: 'production',
+   output: {
+    publicPath: '/weatherApp/', // Set this to your repository name
+  },
  });
