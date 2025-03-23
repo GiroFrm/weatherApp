@@ -1,13 +1,13 @@
 # Weather App
 
 This is a SPA (Single Page Application) weather App. 
-It fecthes data from weather.visualcrossing.com
+It fetches data from weather.visualcrossing.com
 
 ![Homepage Screenshot](src/images/screen.png)
 
 ## How to Access Weather App
 
-E-commerce is hosted on **Vercell**. You can access it [here](https://memory-card-bay-omega.vercel.app/).
+E-commerce is hosted on **Vercell**. You can access it [here](https://girofrm.github.io/weatherApp/).
 
 ## Features
 - **Responsive Design**: Ensures a responsive design for all screen sizes.
